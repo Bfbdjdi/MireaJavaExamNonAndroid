@@ -33,6 +33,7 @@ public class Main {
                     ThirdPerson.thirdPerson();
                     break;
                 case "4":
+                    ForthHashMap.hashMapSorter();
                     break;
                 case "5":
                     break;
