@@ -27,6 +27,7 @@ public class Main {
                     FirstLineConverter.lineConverter();
                     break;
                 case "2":
+                    SecondInInputMinMax.findMinMax();
                     break;
                 case "3":
                     break;
