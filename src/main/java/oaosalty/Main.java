@@ -30,6 +30,7 @@ public class Main {
                     SecondInInputMinMax.findMinMax();
                     break;
                 case "3":
+                    ThirdPerson.thirdPerson();
                     break;
                 case "4":
                     break;

@@ -4,9 +4,9 @@ import java.util.*;
 
 public class SecondInInputMinMax {
 
-    public static boolean numCheck (String strNum)
+    private static boolean numCheck(String strNum)
     {
-        //Если преобразование String -> Float получится, то норм, иначе String
+        //Если преобразование String -> Float получится, то норм, иначе String strNum
         //числом не может являться
         try
         {
@@ -36,7 +36,7 @@ public class SecondInInputMinMax {
             isInputOk = true;
             System.out.println("Введи через запятую набор чисел:");
 
-            //Считываем введённоё в консоль
+            //Считываем введённое в консоль
             Scanner scan = new Scanner(System.in);
             input = scan.nextLine().replaceAll(" ", "").replaceAll("[.]{2,}", ".").replaceAll("[+]{2,}", "+").replaceAll("[-]{2,}", "-");
 

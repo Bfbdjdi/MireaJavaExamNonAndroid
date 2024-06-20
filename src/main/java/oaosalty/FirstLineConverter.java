@@ -12,7 +12,7 @@ public class FirstLineConverter {
     {
         System.out.println("Введи строку:");
 
-        //Считываем введённоё в консоль
+        //Считываем введённое в консоль
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
 
