@@ -36,6 +36,7 @@ public class Main {
                     ForthHashMap.hashMapSorter();
                     break;
                 case "5":
+                    FifthVowelsFromFileRemover.removeVowels();
                     break;
                 case "6":
                     break;
