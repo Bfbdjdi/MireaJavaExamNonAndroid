@@ -39,6 +39,7 @@ public class Main {
                     FifthVowelsFromFileRemover.removeVowels();
                     break;
                 case "6":
+                    SixthSerialize.toSerialize();
                     break;
                 case "7":
                     break;
