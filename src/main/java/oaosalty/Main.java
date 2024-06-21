@@ -42,6 +42,7 @@ public class Main {
                     SixthSerialize.toSerialize();
                     break;
                 case "7":
+                    SeventhRectangle.calcSurface();
                     break;
                 case "8":
                     break;
