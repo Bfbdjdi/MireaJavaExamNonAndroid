@@ -45,6 +45,7 @@ public class Main {
                     SeventhRectangle.calcSurface();
                     break;
                 case "8":
+                    EighthFactorial.factorialCalculator();
                     break;
                 case "9":
                     break;
