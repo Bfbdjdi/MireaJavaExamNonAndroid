@@ -51,6 +51,7 @@ public class Main {
                     NinthDebug.toDebug();
                     break;
                 case "10":
+                    TenthURLDownload.urlDownloader();
                     break;
 
                 default:
