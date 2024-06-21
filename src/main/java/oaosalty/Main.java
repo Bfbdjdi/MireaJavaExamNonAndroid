@@ -48,6 +48,7 @@ public class Main {
                     EighthFactorial.factorialCalculator();
                     break;
                 case "9":
+                    NinthDebug.toDebug();
                     break;
                 case "10":
                     break;
