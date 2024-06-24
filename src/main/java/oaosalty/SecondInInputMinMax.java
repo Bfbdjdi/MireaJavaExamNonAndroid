@@ -19,6 +19,9 @@ public class SecondInInputMinMax {
         }
     }
 
+    static float minNum;
+    static float maxNum;
+
     public static void findMinMax()
     {
         //Выключатель для цикла while, если пользователь ввёл всё в консоль как надо
@@ -28,6 +31,9 @@ public class SecondInInputMinMax {
         String input = "";
         String[] inputSplit;
         HashSet<Float> numSet = new HashSet<>();
+
+        minNum = Float.MAX_VALUE;
+        maxNum = -1 * Float.MAX_VALUE;
 
         //Крутимся в цикле, если пользователь вводит в консоль не числа
         while (!isInputOk)
@@ -52,6 +58,7 @@ public class SecondInInputMinMax {
 
                     //Если отдельно взятый элемент не число, то ругаемся и цикл заново
                     if ((!numCheck(element)) && (!element.isEmpty())) {
+
                         System.out.println(element + " - не число. Вводить можно только числа. Повтори ввод.");
 
                         //false = цикл будет перезапущен
@@ -64,6 +71,9 @@ public class SecondInInputMinMax {
                         float numToAdd = Float.parseFloat(element);
                         if (Float.isFinite(numToAdd))
                         {
+                            if (numToAdd > maxNum) maxNum = numToAdd;
+                            if (numToAdd < minNum) minNum = numToAdd;
+
                             numSet.add(numToAdd);
                         }
                         else
@@ -86,9 +96,9 @@ public class SecondInInputMinMax {
         //Нет необходимости, но всё же сортируем набор введённых чисел
         List<Float> sortedList = new ArrayList<>(numSet);
         Collections.sort(sortedList);
-        System.out.println("Словарик: " + sortedList);
 
-        System.out.println("Наименьшее число: " + numSet.stream().min(Float::compare).get());
-        System.out.println("Наибольшее число: " + numSet.stream().max(Float::compare).get());
+        System.out.println("Словарик: " + sortedList);
+        System.out.println("Наименьшее число: " + minNum);
+        System.out.println("Наибольшее число: " + maxNum);
     }
 }
