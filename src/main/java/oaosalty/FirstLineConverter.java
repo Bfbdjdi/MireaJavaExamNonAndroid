@@ -11,14 +11,23 @@ public class FirstLineConverter {
     public static void lineConverter()
     {
         System.out.println("Введи строку:");
-
         //Считываем введённое в консоль
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
 
         //Все 3 преобразования input в одной строке с помощью StringBuilder - тип как String, но изменяемый
-        String modifiedInput = new StringBuffer(input).reverse().replace(0, 1, "")
-                .replace(input.length()-2,input.length()-1,"").toString().toUpperCase();
+//        String modifiedInput = new StringBuffer(input).reverse().replace(0, 1, "")
+//                .replace(input.length()-2,input.length()-1,"").toString().toUpperCase();
+
+        //Второй вариант переворота через stringBuffer
+        String perevorot2 = new StringBuffer(input).reverse().toString();
+        //Конец
+        String perevorot = "";
+        for (int i = input.length()-1;i>=0;i--){
+            perevorot = perevorot + input.charAt(i);
+        }
+        String oneLastDel = input.substring(1,input.length()-2);
+        String vverh = input.toUpperCase();
 
         try {
             //Создаётся папка на диске. Возможно, придётся запустить IDE от имени администратора
@@ -27,7 +36,7 @@ public class FirstLineConverter {
 
             //Создаём поток для записи в файл
             FileWriter fw = new FileWriter("C:\\FirstLineConverter\\output.txt");
-
+            String modifiedInput = perevorot+"\n"+oneLastDel+"\n"+vverh;
             //Пишем в файл
             fw.write(modifiedInput);
 
