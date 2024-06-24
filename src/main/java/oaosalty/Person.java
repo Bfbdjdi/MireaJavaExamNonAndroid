@@ -2,7 +2,7 @@ package oaosalty;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public class Person implements Serializable,Comparable<Person> {
 
     private String name;
     private int age;
@@ -18,5 +18,10 @@ public class Person implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Person person) {
+        return name.compareTo(person.getName());
     }
 }

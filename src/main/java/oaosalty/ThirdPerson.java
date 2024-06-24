@@ -1,8 +1,6 @@
 package oaosalty;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class ThirdPerson {
     private static boolean numCheck (String strNum)
@@ -112,8 +110,8 @@ public class ThirdPerson {
         }
 
         //Сортируем массив
-        persons.sort(Comparator.comparing(Person::getName));
-
+//        persons.sort(Comparator.comparing(Person::getName));
+        Collections.sort(persons);
         System.out.println("Итоговый список:");
         for (Person entry : persons) System.out.println(entry.getName());
     }
